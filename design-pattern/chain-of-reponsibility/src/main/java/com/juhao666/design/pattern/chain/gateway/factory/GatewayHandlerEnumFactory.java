@@ -1,9 +1,9 @@
-package com.juhao666.design.pattern.chain.GateWay.factory;
+package com.juhao666.design.pattern.chain.gateway.factory;
 
-import com.juhao666.design.pattern.chain.GateWay.Dao.GatewayDao;
-import com.juhao666.design.pattern.chain.GateWay.Dao.GatewayImpl;
-import com.juhao666.design.pattern.chain.GateWay.Entity.GatewayEntity;
-import com.juhao666.design.pattern.chain.GateWay.GatewayHandler;
+import com.juhao666.design.pattern.chain.gateway.dao.GatewayDao;
+import com.juhao666.design.pattern.chain.gateway.dao.GatewayImpl;
+import com.juhao666.design.pattern.chain.gateway.entity.GatewayEntity;
+import com.juhao666.design.pattern.chain.gateway.GatewayHandler;
 
 import java.lang.reflect.InvocationTargetException;
 

@@ -1,7 +1,7 @@
-package com.juhao666.design.pattern.chain.GateWay.Dao;
+package com.juhao666.design.pattern.chain.gateway.dao;
 
-import com.juhao666.design.pattern.chain.GateWay.Entity.GatewayEntity;
-import com.juhao666.design.pattern.chain.GateWay.Enum.GatewayEnum;
+import com.juhao666.design.pattern.chain.gateway.entity.GatewayEntity;
+import com.juhao666.design.pattern.chain.gateway.enums.GatewayEnum;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,4 @@
-package com.juhao666.design.pattern.chain.GateWay;
-
-import com.juhao666.design.pattern.chain.GateWay.Entity.GatewayEntity;
+package com.juhao666.design.pattern.chain.gateway;
 
 public abstract class GatewayHandler {
 

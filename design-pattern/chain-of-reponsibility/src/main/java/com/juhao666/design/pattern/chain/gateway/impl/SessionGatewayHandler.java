@@ -1,7 +1,7 @@
-package com.juhao666.design.pattern.chain.GateWay.impl;
+package com.juhao666.design.pattern.chain.gateway.impl;
 
-import com.juhao666.design.pattern.chain.GateWay.Enum.GatewayEnum;
-import com.juhao666.design.pattern.chain.GateWay.GatewayHandler;
+import com.juhao666.design.pattern.chain.gateway.enums.GatewayEnum;
+import com.juhao666.design.pattern.chain.gateway.GatewayHandler;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

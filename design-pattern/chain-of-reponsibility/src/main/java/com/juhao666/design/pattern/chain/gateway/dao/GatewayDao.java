@@ -1,6 +1,6 @@
-package com.juhao666.design.pattern.chain.GateWay.Dao;
+package com.juhao666.design.pattern.chain.gateway.dao;
 
-import com.juhao666.design.pattern.chain.GateWay.Entity.GatewayEntity;
+import com.juhao666.design.pattern.chain.gateway.entity.GatewayEntity;
 
 public interface  GatewayDao {
     /**

@@ -1,6 +1,6 @@
-package com.juhao666.design.pattern.chain.GateWay;
+package com.juhao666.design.pattern.chain.gateway;
 
-import com.juhao666.design.pattern.chain.GateWay.factory.GatewayHandlerEnumFactory;
+import com.juhao666.design.pattern.chain.gateway.factory.GatewayHandlerEnumFactory;
 
 public class GatewayClient {
     public static void main(String[] args) {

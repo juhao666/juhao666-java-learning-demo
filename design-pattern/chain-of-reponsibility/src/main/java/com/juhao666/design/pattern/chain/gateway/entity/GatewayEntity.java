@@ -1,4 +1,4 @@
-package com.juhao666.design.pattern.chain.GateWay.Entity;
+package com.juhao666.design.pattern.chain.gateway.entity;
 
 import lombok.Data;
 
