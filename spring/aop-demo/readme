@@ -1,0 +1,67 @@
+######################################################################
+call :http://localhost:8080/aspect?msg=juhao666
+output:
+
+2023-07-01 17:19:42.515  INFO 28628 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before path: /aspect
+2023-07-01 17:19:42.517  INFO 28628 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before class name: com.juhao666.spring.aop.controller.AspectController
+2023-07-01 17:19:42.517  INFO 28628 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before method name: aspect
+2023-07-01 17:19:42.517  INFO 28628 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before args: {msg=juhao666}
+2023-07-01 17:19:42.528  INFO 28628 --- [nio-8080-exec-1] c.j.s.aop.controller.AspectController    : this is aspect controller...
+2023-07-01 17:19:42.530  INFO 28628 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : after method name: aspect  return value: Result(code=0, message=success, data=juhao666)
+2023-07-01 17:19:42.530  INFO 28628 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : after method name: aspect
+
+######################################################################
+call:http://localhost:8080/exception?msg=juhao666
+output:
+2023-07-01 17:21:33.191  INFO 28628 --- [nio-8080-exec-5] c.juhao666.spring.aop.aspect.WebAspect   : before path: /exception
+2023-07-01 17:21:33.191  INFO 28628 --- [nio-8080-exec-5] c.juhao666.spring.aop.aspect.WebAspect   : before class name: com.juhao666.spring.aop.controller.AspectController
+2023-07-01 17:21:33.191  INFO 28628 --- [nio-8080-exec-5] c.juhao666.spring.aop.aspect.WebAspect   : before method name: exception
+2023-07-01 17:21:33.191  INFO 28628 --- [nio-8080-exec-5] c.juhao666.spring.aop.aspect.WebAspect   : before args: {msg=juhao666}
+2023-07-01 17:21:33.191  INFO 28628 --- [nio-8080-exec-5] c.j.s.aop.controller.AspectController    : this is exception controller...
+2023-07-01 17:21:33.192  INFO 28628 --- [nio-8080-exec-5] c.juhao666.spring.aop.aspect.WebAspect   : after throwing method name: exception exception message: encounter unknown runtime exception...
+2023-07-01 17:21:33.193  INFO 28628 --- [nio-8080-exec-5] c.juhao666.spring.aop.aspect.WebAspect   : after method name: exception
+2023-07-01 17:21:33.203 ERROR 28628 --- [nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: encounter unknown runtime exception...] with root cause
+
+java.lang.RuntimeException: encounter unknown runtime exception...
+	at com.juhao666.spring.aop.controller.AspectController.exception(AspectController.java:21) ~[classes/:na]
+	at com.juhao666.spring.aop.controller.AspectController$$FastClassBySpringCGLIB$$a1d6912f.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.juhao666.spring.aop.controller.AspectController$$EnhancerBySpringCGLIB$$d4f0c068.exception(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+
+######################################################################
+call:http://localhost:8080/sleep/1000
+output:
+2023-07-01 19:07:21.873  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : around start....
+2023-07-01 19:07:21.875  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before path: /sleep/1000
+2023-07-01 19:07:21.876  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before class name: com.juhao666.spring.aop.controller.AspectController
+2023-07-01 19:07:21.876  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before method name: sleep
+2023-07-01 19:07:21.876  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : before args: {time=1000}
+2023-07-01 19:07:21.895  INFO 3708 --- [nio-8080-exec-1] c.j.s.aop.controller.AspectController    : this is sleep controller start...
+2023-07-01 19:07:22.910  INFO 3708 --- [nio-8080-exec-1] c.j.s.aop.controller.AspectController    : this is sleep controller end...
+2023-07-01 19:07:22.911  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : after method name: sleep  return value: Result(code=0, message=success, data=elapsed time statistic...)
+2023-07-01 19:07:22.911  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : after method name: sleep
+2023-07-01 19:07:22.913  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : around method name: sleep execution time: 1040 ms
+2023-07-01 19:07:22.913  INFO 3708 --- [nio-8080-exec-1] c.juhao666.spring.aop.aspect.WebAspect   : around end....

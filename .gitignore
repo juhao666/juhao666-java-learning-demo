@@ -1,0 +1,16 @@
+/.idea/
+/juhao666-java-learning-demo.iml
+/design-pattern/chain-of-reponsibility/target/
+/java-basic/dtp-demo/.idea/
+/java-basic/dtp-demo/dtp-spring-boot-starter/target/
+/java-basic/dtp-demo/dtp-spring-boot-demo/target/
+/java-basic/dtp-demo/user/target/
+/java-basic/java-common-demo/target/
+/spring/aop-demo/target/
+/spring/ioc-demo/target/
+
+
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+/spring/spring-security-demo/target/
