@@ -1,0 +1,74 @@
+spring:
+  # 数据库配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:postgresql://localhost:5555/jpa-demo
+      username: postgres
+      password: erik1234
+      driver-class-name: org.postgresql.Driver
+      # connection pool settings
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+
+      #监控功能默认关闭
+      stat-view-servlet:
+        enabled: true
+        login-username: druid
+        login-password: 123456
+        #是否允许清空监控数据
+        reset-enable: false
+        #监控系统路径
+        url-pattern: "/druid/*"
+        allow: 127.0.0.1
+        #扩展插件 监控统计stat  注入wall, 日志slf4j
+      filters: stat,wall,slf4j
+      #参数合并和慢SQL
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      #合并多个druidDataSource的监控数据
+      useGlobalDataSourceStat: true
+
+      # web监控（web, uri session)
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+        profile-enable: true
+        #开启spring监控
+      aop-patterns: com.juhao666.spring.druid.*
+      filter:
+        slf4j:
+          enabled: true
+          statement-executable-sql-log-enable: true
+
+  # JPA 配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# WEB 配置
+server:
+  port: 8080
+  servlet:
+    context-path: /springboot
+    session:
+      timeout: 60
+
+logging:
+  level:
+    root: info
+    # 输出 SQL
+    druid.sql.Statement: debug
+    # 输出查询结果
+    druid.sql.ResultSet: debug
+    com.juhao666.spring.druid.dao: debug

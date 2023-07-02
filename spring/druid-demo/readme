@@ -1,0 +1,5 @@
+refer to spring-data-jpa-demo/readme
+
+url: localhost not works here...
+http://127.0.0.1:8080/springboot/druid/login.html
+druid/123456 refer to configuration.
