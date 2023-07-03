@@ -1,6 +1,6 @@
-package com.juhao666.spring.jpa.service;
+package com.juhao666.spring.druid.service;
 
-import com.juhao666.spring.jpa.entity.User;
+import com.juhao666.spring.druid.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

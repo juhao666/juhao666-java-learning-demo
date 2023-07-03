@@ -1,8 +1,8 @@
-package com.juhao666.spring.jpa.service.impl;
+package com.juhao666.spring.druid.service.impl;
 
-import com.juhao666.spring.jpa.dao.UserDao;
-import com.juhao666.spring.jpa.entity.User;
-import com.juhao666.spring.jpa.service.UserService;
+import com.juhao666.spring.druid.dao.UserDao;
+import com.juhao666.spring.druid.entity.User;
+import com.juhao666.spring.druid.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

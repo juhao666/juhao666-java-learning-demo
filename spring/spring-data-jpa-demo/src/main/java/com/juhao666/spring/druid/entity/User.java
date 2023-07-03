@@ -1,4 +1,4 @@
-package com.juhao666.spring.jpa.entity;
+package com.juhao666.spring.druid.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

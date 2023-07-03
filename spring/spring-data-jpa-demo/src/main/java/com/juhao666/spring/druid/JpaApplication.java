@@ -1,4 +1,4 @@
-package com.juhao666.spring.jpa;
+package com.juhao666.spring.druid;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

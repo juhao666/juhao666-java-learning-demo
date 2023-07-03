@@ -1,4 +1,4 @@
-package com.juhao666.spring.jpa;
+package com.juhao666.spring.druid;
 
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

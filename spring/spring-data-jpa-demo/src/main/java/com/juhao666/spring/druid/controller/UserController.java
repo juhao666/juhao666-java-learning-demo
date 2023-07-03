@@ -1,6 +1,6 @@
-package com.juhao666.spring.jpa.controller;
-import com.juhao666.spring.jpa.entity.User;
-import com.juhao666.spring.jpa.service.impl.UserServiceImpl;
+package com.juhao666.spring.druid.controller;
+import com.juhao666.spring.druid.entity.User;
+import com.juhao666.spring.druid.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
