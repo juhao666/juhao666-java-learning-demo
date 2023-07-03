@@ -1,0 +1,22 @@
+测试success和exception两种情况下API返回结果是否结构一致。
+###########
+1. http://localhost:8080/success
+{
+code: 0,
+message: "success",
+data: null
+}
+###########
+2.http://localhost:8080/exception
+{
+code: 500,
+message: "encounter unknown runtime exception...",
+data: null
+}
+###########
+3.http://localhost:8080/api/exception
+{
+code: 500,
+message: "system error",
+data: null
+}
