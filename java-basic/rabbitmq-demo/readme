@@ -1,0 +1,42 @@
+1. install Erlang as administrator  https://www.erlang.org/patches/otp-26.0
+   in C:\tools\Erlang
+
+2. install Rabbitmq as administrator   https://www.rabbitmq.com/install-windows.html#installer
+   in C:\tools\rabbitmq
+
+3. set ERLANG_HOME RABBITMQ_HOME and path
+
+4. check  Rabbitmq service status
+
+C:\Users\Erik>rabbitmqctl status
+
+5. http://localhost:15672/
+
+####################################
+1) /rabbit/simple  简单模式
+POST: http://localhost:8080/rabbit/simple?routeKey=hello&message="hello rabbit"
+output:
+2023-07-06 23:09:27.071  INFO 14992 --- [nio-8080-exec-3] c.j.r.c.RabbitProducerController         : send routeKey:hello send message:"hello rabbit"
+2023-07-06 23:09:27.090  INFO 14992 --- [ntContainer#0-1] c.j.rabbitmq.consumer.SimpleConsumer     : "hello rabbit"
+
+
+2) /rabbit/work  工作模式
+POST: http://localhost:8080/rabbit/work?routeKey=work&message="work rabbit"
+output:
+2023-07-06 23:14:38.215  INFO 27896 --- [ntContainer#1-1] c.j.rabbitmq.consumer.WorkConsumer       : The 1 record message:"work rabbit" consumed by receiveOne
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#2-1] c.j.rabbitmq.consumer.WorkConsumer       : The 0 record message:"work rabbit" consumed by receiveTwo
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#1-1] c.j.rabbitmq.consumer.WorkConsumer       : The 3 record message:"work rabbit" consumed by receiveOne
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#2-1] c.j.rabbitmq.consumer.WorkConsumer       : The 2 record message:"work rabbit" consumed by receiveTwo
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#1-1] c.j.rabbitmq.consumer.WorkConsumer       : The 5 record message:"work rabbit" consumed by receiveOne
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#2-1] c.j.rabbitmq.consumer.WorkConsumer       : The 4 record message:"work rabbit" consumed by receiveTwo
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#1-1] c.j.rabbitmq.consumer.WorkConsumer       : The 7 record message:"work rabbit" consumed by receiveOne
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#2-1] c.j.rabbitmq.consumer.WorkConsumer       : The 6 record message:"work rabbit" consumed by receiveTwo
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#1-1] c.j.rabbitmq.consumer.WorkConsumer       : The 9 record message:"work rabbit" consumed by receiveOne
+2023-07-06 23:14:38.217  INFO 27896 --- [ntContainer#2-1] c.j.rabbitmq.consumer.WorkConsumer       : The 8 record message:"work rabbit" consumed by receiveTwo
+todo: 这里是平均消费。如何做到能者多劳？
+
+3）广播模式
+4）路由模式
+
+####################################
+
