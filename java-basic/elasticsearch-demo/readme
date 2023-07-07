@@ -1,0 +1,42 @@
+1. download target version from https://www.elastic.co/cn/downloads/past-releases/elasticsearch-7-15-2
+2. unzip it in C:\tools\elasticsearch-7.15.2
+3. set system env.  ES_JAVA_HOME and PATH ,  ELASTICSEARCH_HOME
+4. run C:\Users\Erik>elasticsearch
+5. access http://localhost:9200/
+  output:
+
+  {
+  name: "LAPTOP-KFSFG352",
+  cluster_name: "elasticsearch",
+  cluster_uuid: "b4KdAdZFSRe53z-qhhv1Tg",
+  version: {
+  number: "7.15.2",
+  build_flavor: "default",
+  build_type: "zip",
+  build_hash: "93d5a7f6192e8a1a12e154a2b81bf6fa7309da0c",
+  build_date: "2021-11-04T14:04:42.515624022Z",
+  build_snapshot: false,
+  lucene_version: "8.9.0",
+  minimum_wire_compatibility_version: "6.8.0",
+  minimum_index_compatibility_version: "6.0.0-beta1"
+  },
+  tagline: "You Know, for Search"
+  }
+
+
+1) /article  must run first to create index.
+PUT http://localhost:9200/article
+  output:
+{
+    "acknowledged": true,
+    "shards_acknowledged": true,
+    "index": "article"
+}
+Note, 1) and 2) different URL port
+2) /es to add document
+POST http://localhost:8080/es
+
+request body in es-init-data.json
+
+3) //es/search-title
+GET http://localhost:8080/es/search-title?title=spring
