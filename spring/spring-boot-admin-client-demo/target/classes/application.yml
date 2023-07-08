@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-boot-admin-client-demo
+  boot:
+    admin:
+      client:
+        # 服务端地址
+        url: http://localhost:9090/admin
+        instance:
+          # 客户端地址
+          health-url: http://localhost:8080/actuator/health
+          service-url: http://localhost:8080/doc.html
+          management-url: http://localhost:8080/actuator
+        # 服务端用户名密码
+        username: admin
+        password: 123456

@@ -1,0 +1,48 @@
+1. spring-boot-admin-demo
+output:
+{
+status: "UP"
+}
+
+2.http://localhost:8080/actuator
+output:
+{
+_links: {
+self: {
+href: "http://localhost:8080/actuator",
+templated: false
+},
+health: {
+href: "http://localhost:8080/actuator/health",
+templated: false
+},
+health-path: {
+href: "http://localhost:8080/actuator/health/{*path}",
+templated: true
+}
+}
+}
+
+3.when add a new CustomHealthIndicator
+URL:http://localhost:8080/actuator/health/custom
+output:
+{
+status: "DOWN",
+details: {
+message: "encounter error"
+}
+}
+
+4. GET http://localhost:8080/actuator/customEndPoint
+5. POST http://localhost:8080/actuator/customEndPoint?name=juhao666
+   content-type:application/json in header
+6. DELETE http://localhost:8080/actuator/customEndPoint?name=juhao666
+
+
+7. add spring-boot-admin and application.yml with below,
+server:
+  servlet:
+    context-path: /admin
+  port: 9090
+
+8. http://localhost:9090/admin/applications
