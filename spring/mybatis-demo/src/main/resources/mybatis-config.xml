@@ -1,0 +1,26 @@
+<configuration>
+    <typeAliases>
+        <!-- define your type aliases here -->
+    </typeAliases>
+
+    <mappers>
+        <!-- specify your mapper locations here -->
+    </mappers>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="com.zaxxer.hikari.HikariDataSource">
+                <property name="driverClassName" value="${spring.datasource.driver-class-name}" />
+                <property name="jdbcUrl" value="${spring.datasource.url}" />
+                <property name="username" value="${spring.datasource.username}" />
+                <property name="password" value="${spring.datasource.password}" />
+                <!-- set connection pool properties -->
+                <property name="maximumPoolSize" value="10" />
+                <property name="minimumIdle" value="5" />
+                <property name="idleTimeout" value="60000" />
+                <property name="connectionTestQuery" value="SELECT 1" />
+            </dataSource>
+        </environment>
+    </environments>
+</configuration>

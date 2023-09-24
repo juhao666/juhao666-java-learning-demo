@@ -1,0 +1,9 @@
+1.如果用task - MyTaskDemo
+  1) 在启动类要加上@EnableScheduling
+
+2.如果用quartz //todo  以下测试未通过 存在问题
+  1) QuartzConfig
+  2) MyJob
+  3) datasource and quartz in application.yml
+  4) quartz.properties
+  5) //@EnableScheduling

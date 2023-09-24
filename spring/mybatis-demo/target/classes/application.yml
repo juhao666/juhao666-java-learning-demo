@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dbname
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: MyHikariCP
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 60000
+      connection-test-query: SELECT 1
+
