@@ -14,3 +14,4 @@
 !**/src/main/**/target/
 !**/src/test/**/target/
 /spring/spring-security-demo/target/
+/spring/spring-data-jpa-demo/target/

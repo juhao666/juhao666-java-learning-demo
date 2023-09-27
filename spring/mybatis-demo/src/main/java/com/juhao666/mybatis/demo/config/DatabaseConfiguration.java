@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import com.zaxxer.hikari.HikariDataSource
+import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 @MapperScan("com.juhao666.mybatis.demo.mapper")
