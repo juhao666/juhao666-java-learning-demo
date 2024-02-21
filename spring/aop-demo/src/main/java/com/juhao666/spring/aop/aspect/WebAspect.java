@@ -66,7 +66,7 @@ public class WebAspect {
         log.info("after throwing method name: {} exception message: {} ", methodName, e.getMessage());
     }
 
-    @Around(value = "pointCut()")
+    @Around(value = "pointCut()") // 目标方法需要花费一定时间执行时会触发Around aspect
     public Object around(ProceedingJoinPoint joinPoint) {
         log.info("around start....");
         long start = System.currentTimeMillis();

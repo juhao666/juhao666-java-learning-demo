@@ -16,7 +16,7 @@ public class WebServiceAutoConfiguration {
     @Bean
     //@Conditional(TomcatCondition.class)  //optional 1
     @ConditionalOnClass("org.eclipse.jetty.server.server") // optional 2
-    public JettyWebServiceImpl getJettry(){
+    public JettyWebServiceImpl getJetty(){
         return new JettyWebServiceImpl();
     }
 

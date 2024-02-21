@@ -13,13 +13,13 @@ import javax.sql.DataSource;
 @Slf4j
 @Component
 public class MyJob extends QuartzJobBean {
-    @Autowired
-    DataSource dataSource;
+//    @Autowired
+//    DataSource dataSource;
 
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        jdbcTemplate.update("INSERT INTO emp (username, age, position) VALUES (?, ?,?)", "abc", 60, "CXX");
+//        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+//        jdbcTemplate.update("INSERT INTO emp (username, age, position) VALUES (?, ?,?)", "abc", 60, "CXX");
         //可以在这里调用Service代码实现自定义的业务逻辑
         log.info("This is my quartz job running...");
     }
