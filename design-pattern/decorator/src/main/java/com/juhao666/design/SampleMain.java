@@ -8,8 +8,8 @@ public class SampleMain {
     public static void main(String[] args) {
         Person person = new Person("ACat");
 
-        Sneakers sk = new Sneakers();
-        TShirts tShirt = new TShirts();
+        Sneakers sk = new Sneakers(); //shoes
+        TShirts tShirt = new TShirts(); // T-shirt
 
         sk.decorate(person);
         tShirt.decorate(sk);
