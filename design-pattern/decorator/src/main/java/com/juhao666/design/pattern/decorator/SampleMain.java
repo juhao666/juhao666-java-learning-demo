@@ -1,8 +1,8 @@
-package com.juhao666.design;
+package com.juhao666.design.pattern.decorator;
 
-import com.juhao666.design.sample.Sneakers;
-import com.juhao666.design.sample.TShirts;
-import com.juhao666.design.sample.impl.Person;
+import com.juhao666.design.pattern.decorator.sample.Sneakers;
+import com.juhao666.design.pattern.decorator.sample.TShirts;
+import com.juhao666.design.pattern.decorator.sample.impl.Person;
 
 public class SampleMain {
     public static void main(String[] args) {

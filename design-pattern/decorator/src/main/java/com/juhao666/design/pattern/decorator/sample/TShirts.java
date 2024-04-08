@@ -1,6 +1,6 @@
-package com.juhao666.design.sample;
+package com.juhao666.design.pattern.decorator.sample;
 
-import com.juhao666.design.sample.impl.Finery;
+import com.juhao666.design.pattern.decorator.sample.impl.Finery;
 
 public class TShirts extends Finery {
 

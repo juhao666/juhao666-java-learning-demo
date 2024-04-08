@@ -1,4 +1,4 @@
-package com.juhao666.design.sample;
+package com.juhao666.design.pattern.decorator.sample;
 
 /**
  * Component

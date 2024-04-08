@@ -1,6 +1,6 @@
-package com.juhao666.design.sample.impl;
+package com.juhao666.design.pattern.decorator.sample.impl;
 
-import com.juhao666.design.sample.ICharacter;
+import com.juhao666.design.pattern.decorator.sample.ICharacter;
 
 /**
  * Concrete Component
