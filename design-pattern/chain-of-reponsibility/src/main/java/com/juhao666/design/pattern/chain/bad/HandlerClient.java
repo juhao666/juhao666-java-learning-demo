@@ -1,9 +1,5 @@
 package com.juhao666.design.pattern.chain.bad;
 
-import com.juhao666.design.pattern.chain.bad.FirstPassHandler;
-import com.juhao666.design.pattern.chain.bad.SecondPassHandler;
-import com.juhao666.design.pattern.chain.bad.ThirdPassHandler;
-
 public class HandlerClient {
     public static void main(String[] args) {
 
