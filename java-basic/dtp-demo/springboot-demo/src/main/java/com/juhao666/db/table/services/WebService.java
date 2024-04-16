@@ -1,4 +1,4 @@
-package org.example.services;
+package com.juhao666.db.table.services;
 
 public interface WebService {
 

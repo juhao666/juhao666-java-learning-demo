@@ -14,6 +14,5 @@ public class HandlerClient {
         //说明：因为第三关是最后一关，因此没有下一关
         //从第一个关卡开始
         firstPassHandler.pass();
-
     }
 }

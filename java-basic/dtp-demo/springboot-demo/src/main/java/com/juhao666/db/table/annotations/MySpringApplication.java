@@ -1,6 +1,5 @@
-package org.example.annotations;
+package com.juhao666.db.table.annotations;
 
-import org.example.services.WebService;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.lang.annotation.*;

@@ -1,14 +1,10 @@
-package org.example.configuration;
+package com.juhao666.db.table.configuration;
 
-import org.example.annotations.ConditionalOnClass;
-import org.example.conditions.TomcatCondition;
-import org.example.services.impl.JettyWebServiceImpl;
-import org.example.services.impl.TomcatWebServiceImpl;
+import com.juhao666.db.table.annotations.ConditionalOnClass;
+import com.juhao666.db.table.services.impl.JettyWebServiceImpl;
+import com.juhao666.db.table.services.impl.TomcatWebServiceImpl;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
-
-import java.beans.BeanProperty;
 
 @Configuration
 public class WebServiceAutoConfiguration {

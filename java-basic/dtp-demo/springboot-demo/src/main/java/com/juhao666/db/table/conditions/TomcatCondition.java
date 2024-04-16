@@ -1,4 +1,4 @@
-package org.example.conditions;
+package com.juhao666.db.table.conditions;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;

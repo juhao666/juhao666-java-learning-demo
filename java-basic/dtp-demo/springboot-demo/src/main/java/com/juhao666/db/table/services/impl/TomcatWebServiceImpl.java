@@ -1,6 +1,6 @@
-package org.example.services.impl;
+package com.juhao666.db.table.services.impl;
 
-import org.example.services.WebService;
+import com.juhao666.db.table.services.WebService;
 
 public class TomcatWebServiceImpl implements WebService {
     @Override
